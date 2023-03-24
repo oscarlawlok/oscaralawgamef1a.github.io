@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>遊戲</title>
+	<style>
+		/* 使用flexbox佈局，將元素置中 */
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		/* 將按鈕和段落設置寬度為80% */
+		button, #output {
+			width: 80%;
+		}
+	</style>
+	<script>
+		function generateSentence() {
+			var sentences = [
+				"知唔知",
+				"望住何sir,知唔知",
+				"Day boy 擦黑板",
+				"drill9晚5",
+				"你哋正啦,又有Mr tam金句,上次係一塌糊塗,今次係成pat水母"
+			];
+			var randomIndex = Math.floor(Math.random() * sentences.length);
+			var sentence = sentences[randomIndex];
+			document.getElementById("output").innerHTML = sentence;
+		}
+	</script>
+</head>
+<body>
+	<h1>遊戲</h1>
+	<p>按下按鈕以顯示隨機的語句：</p>
+	<button onclick="generateSentence()">按鈕</button>
+	<p id="output"></p>
+</body>
+</html>
